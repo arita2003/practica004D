@@ -5,6 +5,10 @@
     font-family: 'Poppins',sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     background: #1f242d;
     color: #fff;
@@ -15,8 +19,9 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 2rem  9%;
+    background:var(--bg-color);
+    background-color: #1f242d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +29,7 @@ body{
 }
 
 .logo{
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -35,7 +40,7 @@ body{
 
 .navbar a {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -50,6 +55,8 @@ body{
 .navbar a.active {
     color: #0ef;
 }
+
+
 
 .home{
     position: relative;
@@ -104,6 +111,7 @@ body{
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out
     infinite;
     animation-delay: 2s, 2.8s;
+    margin-bottom: 30px;
 }
 
 .social-media a {
@@ -132,6 +140,7 @@ body{
 }
 
 .about{
+    padding: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,6 +148,10 @@ body{
     background: var(--second-bg-color);
 }
 
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+}
 .about-img img{
     max-width: 350px; 
     margin-right: -20px;
@@ -148,10 +161,6 @@ body{
     animation-delay: 2s, 2.8s;
 }
 
-.heading{
-    text-align: center;
-    font-size: 3.5rem;
-}
 
 .about-content h2 {
     text-align:left;
@@ -192,11 +201,37 @@ body{
     font-size: 2.6rem;
 }
 
-
 .about-content p{
     font-size: 1.3rem;
     margin: 2rem 0 3rem;
 }
+
+
+
+.Perros {
+    padding: 150px 0;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
+    padding: 40px;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Perros{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 
 @keyframes slideRight{
     0%{
@@ -208,6 +243,7 @@ body{
         opacity: 1;
     }
 }
+
 
 @keyframes slideTop{
     0%{
