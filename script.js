@@ -15,19 +15,39 @@ var typed =new Typed(".segundo-text",{
 })
 
 
-const NosotrosLink = document.querySelector('a[href="#Nosotros"]');
+// Selecciona todos los enlaces de la barra de navegación
+const navLinks = document.querySelectorAll('.navbar a');
 
-// Obtiene la posición vertical de la sección "Nosotros"
-const NosotrosPosition = document.getElementById('Nosotros').offsetTop;
-
-// Agrega un evento "scroll" al objeto window para detectar cuándo el usuario se desplaza por la página
-window.addEventListener('scroll', () => {
-  // Compara la posición vertical actual de la página con la posición de la sección "Nosotros"
-    if (window.scrollY >= NosotrosPosition) {
-    // Agrega la clase "active" a la etiqueta <a> correspondiente a la sección "Nosotros"
-    NosotrosLink.classList.add('active');
-    } else {
-    // Quita la clase "active" de la etiqueta <a> correspondiente a la sección "Nosotros"
-    NosotrosLink.classList.remove('active');
-}
+// Para cada enlace, agrega un "event listener" que se activa cuando se hace clic
+navLinks.forEach(link => {
+link.addEventListener('click', () => {
+    // Remueve la clase "active" de todos los enlaces
+    navLinks.forEach(link => link.classList.remove('active'));
+    // Agrega la clase "active" al enlace correspondiente
+    link.classList.add('active');
 });
+});
+
+// Agrega un "event listener" que se activa cuando el usuario se desplaza por la página
+window.addEventListener('scroll', () => {
+  // Obtiene la posición vertical del usuario
+const scrollPos = window.scrollY;
+  // Para cada sección, verifica si está visible en la pantalla
+document.querySelectorAll('section').forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      // Si la sección está visible, agrega la clase "active" al enlace correspondiente
+    const link = document.querySelector(`.navbar a[href="#${section.id}"]`);
+    link.classList.add('active');
+    } else {
+      // Si la sección no está visible, remueve la clase "active" del enlace correspondiente
+    const link = document.querySelector(`.navbar a[href="#${section.id}"]`);
+    link.classList.remove('active');
+    }
+});
+});
+
+
+
+
