@@ -7,7 +7,7 @@ var typed =new Typed(".multiple-text",{
 })
 
 var typed =new Typed(".segundo-text",{
-    strings:[ "","Araceli","Anderson"],
+    strings:[ "","Araceli","Anderson","Fernanda"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
