@@ -318,6 +318,31 @@ body{
 }
 
 
+
+.animal-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.animal-img {
+    margin-right: 20px;
+}
+
+.animal-content {
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 25%;
+}
+
+.animal-img img {
+    width: 400px;
+    height: 460px;
+    margin-top: 30%;
+    margin-left: 80%;
+}
+
+
+
 @keyframes slideTop{
     0%{
         transform: translateY(100px);
